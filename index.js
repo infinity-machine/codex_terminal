@@ -16,8 +16,8 @@ function exitPrompt() {
 
 async function runPrompt(){
     const resolve = await inquirer.prompt(prompt)
-    if (resolve.query === 'QUIT') exitPrompt()
-    const response = await fetch('http:localhost:6969', {
+    if (resolve.query === 'EXIT') exitPrompt()
+    const response = await fetch('http://localhost:6969', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
